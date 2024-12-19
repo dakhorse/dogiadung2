@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HouseHoldMart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #2c3e50;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #f39c12;
+        }
+        .navbar-nav .nav-link {
+            color: #ecf0f1 !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f39c12 !important;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #34495e;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        .intro-text span {
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        /* Feature Cards */
+        .feature-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .card {
+            width: 18rem;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            color: #34495e;
+        }
+        .card-text {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+        .card-footer {
+            background-color: #ecf0f1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 250px;
+            background-color: #34495e;
+            color: white;
+            padding-top: 20px;
+            height: 100%;
+            box-shadow: 2px 0px 5px rgba(0,0,0,0.1);
+        }
+        .sidebar h4 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/products">HouseHoldMart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/products">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/products">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/index">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/products">About-Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h4>Categories</h4>
+    <a href="#">News</a>
+    <a href="#">Refrigerators</a>
+    <a href="#">Washing Machines</a>
+    <a href="#">Microwaves</a>
+    <a href="#">Air Conditioners</a>
+    <a href="#">Vacuum Cleaners</a>
+</div>
+
+<!-- Main Content -->
+<div class="container" style="margin-left: 280px;">
+    <div class="row">
+        <h1 class="text-center">Welcome to the HouseHoldMart!</h1>
+        <p class="intro-text text-center">Explore top-quality <span>home appliances</span> for your everyday needs. From kitchen essentials to living room gadgets, we've got it all!</p>
+    </div>
+
+    <!-- Feature Cards: Xếp các thẻ card ngang hàng -->
+    <div class="feature-cards">
+        <div class="card">
+            <img src="/images/mo-cua-hang-gia-dung-thumb.png" class="card-img-top" alt="Refrigerator">
+            <div class="card-body">
+                <h5 class="card-title">Bí quyết làm giàu</h5>
+                <p class="card-text">Mở cửa hàng gia dụng chưa bao giờ dễ đến thế, kiếm hàng triệu đô một năm</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-warning btn-sm">Read Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/images/Giamao.jpg" class="card-img-top" alt="Washing Machine">
+            <div class="card-body">
+                <h5 class="card-title">Giả mạo</h5>
+                <p class="card-text">Lừa đảo qua mạng đang diễn biến phức tạp hơn bao giờ hết, chính phủ khuyến cáo người dân nâng cao cảnh giác đề.... .</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-warning btn-sm">Read Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/images/Kinhnghiemkhivietbaivedogiadung.jpg" class="card-img-top" alt="Microwave">
+            <div class="card-body">
+                <h5 class="card-title">Chia sẻ cùng nhà báo TNT</h5>
+                <p class="card-text">Hơn 20 năm kinh ngiệm trong nghề, anh T đã trải qua rất nhiều việc.....</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-warning btn-sm">Read Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 HouseHoldMart. All rights reserved.</p>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-c5ov8nU51dzmlwYwsrbk4Isv5uB2X6Vwxl3VgFwiu5lOF21Wq5u4vS1QdbT6K9Eq" crossorigin="anonymous"></script>
+</body>
+</html>
